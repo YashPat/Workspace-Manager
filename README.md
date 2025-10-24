@@ -9,6 +9,16 @@ Automates your development workspace setup on macOS by closing all GUI applicati
 - 3-second countdown with cancellation option
 - Graceful error handling
 
+## Setup
+
+Add these aliases to your `~/.zshrc` file to enable global commands:
+
+```bash
+echo 'alias workspace-xcode="cd /Users/ypatil/Code/Personal/Workspace-Manager && ./xcode_flow.py"' >> ~/.zshrc
+echo 'alias workspace-chrome="cd /Users/ypatil/Code/Personal/Workspace-Manager && ./chrome_flow.py"' >> ~/.zshrc
+source ~/.zshrc
+```
+
 ## Available Workflows
 
 **Xcode Development** - Opens Chrome, GitHub Desktop, Cursor, and Xcode
