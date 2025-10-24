@@ -13,13 +13,15 @@ Automates your development workspace setup on macOS by closing all GUI applicati
 
 **Xcode Development** - Opens Chrome, GitHub Desktop, Cursor, and Xcode
 ```bash
-./xcode_flow.py
+workspace-xcode
 ```
 
 **Chrome Only** - Opens only Chrome
 ```bash
-./chrome_flow.py
+workspace-chrome
 ```
+
+*Run these commands from any directory in your terminal!*
 
 ## Creating Custom Workflows
 
