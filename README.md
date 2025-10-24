@@ -1,44 +1,50 @@
 # Workspace Manager
 
-A Python script that automates your development workspace setup on macOS by closing all GUI applications and opening a curated set of development tools.
+Automates your development workspace setup on macOS by closing all GUI applications and opening a curated set of development tools.
 
 ## Features
 
-- **Smart App Detection**: Only closes GUI applications, preserves terminal and system apps
-- **Configurable App List**: Easy to customize which development tools to open
-- **Window Maximization**: Automatically maximizes windows to fullscreen for optimal workspace
-- **Safety Features**: 3-second countdown with cancellation option
-- **Error Handling**: Graceful handling of missing applications and failed operations
+- Smart app detection and window maximization
+- Multiple workflow scripts for different setups
+- 3-second countdown with cancellation option
+- Graceful error handling
 
-## Usage
+## Available Workflows
 
+**Xcode Development** - Opens Chrome, GitHub Desktop, Cursor, and Xcode
 ```bash
-cd Workspace-Manager
 ./xcode_flow.py
 ```
 
-## Configuration
+**Chrome Only** - Opens only Chrome
+```bash
+./chrome_flow.py
+```
 
-Edit the `APPS_TO_OPEN` list in `xcode_flow.py` to customize which applications are launched:
+## Creating Custom Workflows
+
+Create a new workflow script:
 
 ```python
+#!/usr/bin/env python3
+from workspace_manager import close_all_gui_apps, open_and_maximize_apps
+
 APPS_TO_OPEN = [
-    ("Google Chrome", "Google Chrome"),
-    ("GitHub Desktop", "GitHub Desktop"),
-    ("Cursor", "Cursor"),
-    ("Xcode-26.0.1", "Xcode-26.0.1")
+    ("App Name", "Process Name")
 ]
+
+close_all_gui_apps()
+open_and_maximize_apps(APPS_TO_OPEN)
 ```
 
 ## Requirements
 
 - macOS (uses AppleScript)
 - Python 3.6+
-- Applications must be installed in `/Applications/`
 
 ## Safety
 
-⚠️ **Warning**: This script force quits all GUI applications without saving prompts. Only run when you don't have unsaved work.
+⚠️ Force quits all GUI apps without saving. Only run when you don't have unsaved work.
 
 ## License
 

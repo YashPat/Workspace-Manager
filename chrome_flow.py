@@ -1,24 +1,21 @@
 #!/usr/bin/env python3
 """
-Xcode Development Workflow
-Closes all GUI apps and opens Chrome, GitHub Desktop, Cursor, and Xcode.
+Chrome-Only Workflow
+Closes all GUI apps and opens only Chrome.
 """
 
 from workspace_manager import close_all_gui_apps, open_and_maximize_apps
 
 # Configure apps for this workflow
 APPS_TO_OPEN = [
-    ("Google Chrome", "Google Chrome"),
-    ("GitHub Desktop", "GitHub Desktop"),
-    ("Cursor", "Cursor"),
-    ("Xcode-26.0.1", "Xcode-26.0.1")
+    ("Google Chrome", "Google Chrome")
 ]
 
 
 def main():
-    """Execute Xcode development workflow."""
+    """Execute Chrome-only workflow."""
     print("=" * 60)
-    print("Xcode Development Workflow")
+    print("Chrome-Only Workflow")
     print("=" * 60)
     print()
     
